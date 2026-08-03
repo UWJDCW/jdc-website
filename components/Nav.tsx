@@ -11,7 +11,6 @@ const LINKS = [
   { href: "/teams", label: "Teams" },
   { href: "/execs", label: "Execs" },
   { href: "/charity", label: "Charity" },
-  { href: "/sponsors", label: "Sponsors" },
 ];
 
 export default function Nav() {

@@ -17,7 +17,6 @@ export default function Footer() {
           <Link href="/teams" className="hover:underline">Teams</Link>
           <Link href="/execs" className="hover:underline">Meet the execs</Link>
           <Link href="/charity" className="hover:underline">Charity</Link>
-          <Link href="/sponsors" className="hover:underline">Sponsors</Link>
         </nav>
 
         <div className="grid gap-2 content-start">

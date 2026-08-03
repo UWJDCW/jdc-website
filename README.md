@@ -198,19 +198,19 @@ The real deadline is not the competition — it's the **delegate application dea
 
 ## Open Questions
 
-- **Sponsor list, tiers, contract terms, and logo files** — contractual, and the scrapbook system has no component for third-party logos. See the Sponsor Logos section and [DESIGN.md §9](DESIGN.md#9-applying-this-to-the-site).
+- ~~Sponsor list, tiers, contract terms, and logo files~~ — punted: the sponsorship section (homepage strip, nav link, footer link) was pulled from the site for now since none of that content is real yet. `app/sponsors/page.tsx` still exists, unlinked, ready to be wired back in once there's real sponsor content. See the Sponsor Logos section and [DESIGN.md §9](DESIGN.md#9-applying-this-to-the-site).
 - ~~Profile card content for 12 execs~~ — resolved: each card shows a short **role description** (what the role actually does) instead of a personal quote. See `data/execs.ts`.
 - ~~The category names~~ — resolved: JDC West is **4 categories** — Academics, Athletics, Challenge, Debate. The 10 business disciplines under Academics (`ACADEMIC_DISCIPLINES` in `data/categories.ts`) are still placeholder names pending confirmation.
 - ~~Application deadline date~~ — **August 1st**, now shown in the hero and apply section
 - Competition year and host school
 - ~~Final Google Form URLs~~ — resolved for the **delegate application** (`APPLY_FORM_URL`, https://forms.gle/bn2e5TZvma5Dap6a9). **Charity sign-up form is still a placeholder** (`CHARITY_FORM_URL` in `data/links.ts`).
 - ~~Names of the other 5 charity partners~~ — resolved: all 6 named in `data/charities.ts` (Agape Table, Darcy's ARC, The Salvation Army, Children's Hospital Foundation, Maddox Warriors, Winnipeg Goldeyes).
-- **Gallery photos** — the pitch depends on these, so they're a real dependency, not a nice-to-have. Committed to the repo, so someone has to gather and hand them over.
+- ~~Gallery photos~~ — resolved: real 26/27 photos are in, curated down to 20 in `data/gallery.ts` (`GALLERY_PHOTOS`), plus the hero's team photo (`HERO_TEAM_PHOTO`).
 - What "Godparent" means to an outside visitor
 - ~~Contact email destination~~ — resolved: `uwjdcwest@gmail.com` is the one inbox for every contact path (sponsorship, coaches, general inquiries).
 - ~~Socials~~ — resolved: the site links out to **Instagram, YouTube, and LinkedIn** (`INSTAGRAM_URL`, `YOUTUBE_URL`, `LINKEDIN_URL` in `data/links.ts`). Instagram is the primary CTA in Contact Us per the traffic-source note above.
-- **Chant lyrics** — a chant section now exists on the homepage but the actual words are still a placeholder pending the real copy.
-- **Winnie Talks link** — the homepage references the team's Winnie Talks video series; needs a real URL in `data/links.ts` (`WINNIE_TALKS_URL`).
+- ~~Chant lyrics~~ — resolved: the real lyrics are in, with a link to a video of the team doing it (`CHANT_VIDEO_URL` in `data/links.ts`).
+- ~~Winnie Talks link~~ — resolved: `WINNIE_TALKS_URL` in `data/links.ts` points at the real channel.
 - Whether the #2 Teams banner survives — see the concern in the homepage flow above
-- Headshots and bio copy for the exec roster — only the Captain strictly needs a bio, but the table likely wants photos
+- ~~Bio copy for the exec roster~~ — resolved: every exec has a real degree and role blurb in `data/execs.ts`, except Chetan Veer Singh's degree (still TBD). Headshots for most of the roster are in; a couple (e.g. Harleen Deol) still fall back to initials.
 - Whether execs have public-facing contact info (LinkedIn, email) in the table, or whether all contact funnels through one inbox

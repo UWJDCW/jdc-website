@@ -20,7 +20,7 @@ export const GALLERY_PHOTOS = [
   { src: "/images/gallery/comp2026/gallery-09.jpg", caption: "case prep, mid-laugh" },
   { src: "/images/gallery/comp2026/gallery-10.jpg", caption: "team hangout, holiday edition" },
   { src: "/images/gallery/comp2026/gallery-11.jpg", caption: "the road trip to JDC West" },
-  { src: "/images/gallery/comp2026/gallery-12.jpg", caption: "the whole delegation, lit up" },
+  { src: "/images/gallery/comp2026/gallery-12.jpg", caption: "another win in the books" },
   { src: "/images/gallery/comp2026/gallery-13.jpg", caption: "business technology, banner-ready" },
   { src: "/images/gallery/comp2026/gallery-14.jpg", caption: "marketing, making it look easy" },
   { src: "/images/gallery/comp2026/gallery-15.jpg", caption: "business strategy trio" },

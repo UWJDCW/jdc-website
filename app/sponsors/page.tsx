@@ -100,7 +100,7 @@ export default function SponsorsPage() {
           </p>
           <div className="mt-6" data-paste="">
             <a className="btn btn--gold" href={`mailto:${CORPORATE_EMAIL}`}>
-              Email corporate relations
+              Email us
             </a>
           </div>
           <div className="mt-4 flex justify-center">

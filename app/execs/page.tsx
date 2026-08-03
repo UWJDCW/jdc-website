@@ -3,6 +3,7 @@ import Fx from "@/components/Fx";
 import ExecShowcase from "@/components/ExecShowcase";
 import { HeartDoodle, ArrowDoodle, StarDoodle, SmileyDoodle } from "@/components/Doodles";
 import { HEADCOUNT } from "@/data/execs";
+import { APPLY_FORM_URL } from "@/data/links";
 
 export const metadata: Metadata = {
   title: "Meet the Execs — Team Winnie",
@@ -45,7 +46,7 @@ export default function ExecsPage() {
             want your polaroid on this wall?
           </p>
           <div className="mt-6" data-paste="">
-            <a className="btn btn--gold" href="/">
+            <a className="btn btn--gold" href={APPLY_FORM_URL} target="_blank" rel="noopener">
               Apply as a delegate
             </a>
           </div>

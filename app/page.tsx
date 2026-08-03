@@ -19,6 +19,7 @@ import {
   LINKEDIN_URL,
   YOUTUBE_URL,
   WINNIE_TALKS_URL,
+  CHANT_VIDEO_URL,
 } from "@/data/links";
 
 export default function Home() {
@@ -311,11 +312,21 @@ export default function Home() {
               Our chant
             </h2>
             <div className="mt-6 sticker max-w-[48ch]" data-sticker="">
-              {/* TODO: real chant lyrics from the team — placeholder until confirmed */}
-              <p className="hand text-2xl" style={{ color: "var(--purple-deep)" }}>
-                chant lyrics coming soon — ask any delegate to hear it live
+              <p className="hand text-2xl leading-tight" style={{ color: "var(--purple-deep)" }}>
+                Oh Winnie you&rsquo;re so fine
+                <br />
+                You&rsquo;re so fine you blow my mind
+                <br />
+                Hey Winnie-Peg-Peg
+                <br />
+                Hey Winnie-Peg-Peg
+                <br />
+                <span className="text-lg opacity-80">(repeat)</span>
               </p>
             </div>
+            <a className="btn btn--purple mt-5" href={CHANT_VIDEO_URL} target="_blank" rel="noopener">
+              Hear us do it
+            </a>
           </div>
 
           <div className="relative">
@@ -353,33 +364,6 @@ export default function Home() {
           <div className="mt-10">
             <ScatteredGallery />
           </div>
-        </div>
-      </section>
-
-      {/* ---------- Sponsor strip (contractual — see README) ---------- */}
-      <section className="section !py-14" aria-labelledby="sponsors">
-        <div className="wrap">
-          <p className="eyebrow text-center" data-paste="">
-            Made possible by
-          </p>
-          <h2 id="sponsors" className="sr-only">
-            Sponsors
-          </h2>
-          <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-            {["a", "b", "c", "a"].map((r, i) => (
-              <div key={i} className={`sticker relative grid place-items-center min-h-[96px] rot-${r}`} data-sticker="">
-                <span className="tape tape--top" />
-                <span className="hand text-xl" style={{ color: "var(--purple-deep)" }}>
-                  your logo here
-                </span>
-              </div>
-            ))}
-          </div>
-          <p className="text-center mt-6">
-            <Link href="/sponsors" className="btn btn--ghost">
-              Become a sponsor
-            </Link>
-          </p>
         </div>
       </section>
 
@@ -422,7 +406,7 @@ export default function Home() {
                 work? Corporate relations reads every email.
               </p>
               <a className="btn btn--gold mt-4" href={`mailto:${CORPORATE_EMAIL}`}>
-                Email corporate relations
+                Email us
               </a>
             </div>
           </div>
