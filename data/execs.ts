@@ -109,7 +109,7 @@ export const EXECS: Exec[] = [
     degree: "BBA",
     blurb:
       "Where the competition continues beyond the cases. Brings the energy through athletic activities, challenges, and team-building experiences that build chemistry and team spirit.",
-    // No photo yet — falls back to initials on a gradient.
+    photos: ["/images/execs/harleen-deol.jpg"],
   },
 ];
 

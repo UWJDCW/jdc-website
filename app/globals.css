@@ -457,24 +457,36 @@ main {
   background: var(--white);
   border: 3px solid var(--ink);
   border-radius: 999px;
-  padding: 0.4rem 0.5rem 0.4rem 0.4rem;
+  padding: 0.4rem 0.5rem 0.4rem 0.75rem;
   box-shadow: 4px 4px 0 var(--ink);
 }
 
 .nav-brand {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.nav-brand-stamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: var(--purple);
-  color: var(--white);
-  font-family: var(--font-marker), cursive;
-  font-size: 0.98rem;
-  line-height: 1;
-  padding: 0.55em 0.95em 0.6em;
+  padding: 0.35em;
   clip-path: var(--torn-clip);
   rotate: -2deg;
-  white-space: nowrap;
   transition: rotate 0.2s ease;
 }
-.nav-brand:hover {
+.nav-brand-logo {
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.nav-brand-text {
+  font-family: var(--font-marker), cursive;
+  font-size: 1.15rem;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.nav-brand:hover .nav-brand-stamp {
   rotate: 1deg;
 }
 

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { HeartDoodle, StarDoodle, SunDoodle } from "@/components/Doodles";
@@ -32,7 +33,12 @@ export default function Nav() {
       <div className="nav-wrap" ref={wrapRef}>
         <nav className="nav-capsule" aria-label="Main">
           <Link href="/" className="nav-brand" onClick={() => setOpen(false)}>
-            TEAM WINNIE
+            <span className="nav-brand-stamp">
+              <Image src="/images/brand/team-winnie-logo.png" alt="Team Winnie" width={44} height={44} className="nav-brand-logo" />
+            </span>
+            <span className="hidden md:inline-block">
+              <span className="nav-brand-text hl-gold">Team Winnie</span>
+            </span>
           </Link>
 
           <div className="hidden md:flex items-center">

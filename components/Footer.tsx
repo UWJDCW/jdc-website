@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CORPORATE_EMAIL, INSTAGRAM_URL, LINKEDIN_URL, YOUTUBE_URL } from "@/data/links";
 
 export default function Footer() {
@@ -6,7 +7,16 @@ export default function Footer() {
     <footer className="slide-purple mt-20">
       <div className="wrap py-14 grid gap-10 md:grid-cols-3">
         <div>
-          <p style={{ fontFamily: "var(--font-marker)", fontSize: "1.6rem" }}>TEAM WINNIE</p>
+          <p className="flex items-center gap-3" style={{ fontFamily: "var(--font-marker)", fontSize: "1.6rem" }}>
+            <Image
+              src="/images/brand/team-winnie-logo.png"
+              alt=""
+              width={36}
+              height={36}
+              className="rounded-full border-2 border-white/60"
+            />
+            TEAM WINNIE
+          </p>
           <p className="mt-2 opacity-90 text-sm max-w-[28ch]">
             The University of Winnipeg delegation to JDC West, 26/27.
           </p>
