@@ -7,7 +7,7 @@ import { HeartDoodle, SunDoodle } from "@/components/Doodles";
 import { CHARITIES } from "@/data/charities";
 import { CHARITY_PHOTOS } from "@/data/gallery";
 import { CAPTAIN } from "@/data/execs";
-import { DONATE_URL, CORPORATE_EMAIL } from "@/data/links";
+import { DONATE_URL, CORPORATE_EMAIL, INSTAGRAM_URL } from "@/data/links";
 
 export const metadata: Metadata = {
   title: "Charity Partners — Team Winnie",
@@ -111,7 +111,7 @@ export default function CharityPage() {
 
       {/* Events */}
       <section className="slide-purple tx-halftone tx-halftone--light section" aria-labelledby="events">
-        <div className="wrap grid gap-10 md:grid-cols-[1fr_.85fr] items-start">
+        <div className="wrap grid gap-10 md:grid-cols-[1fr_.85fr] items-center">
           <div>
             <h2 id="events" style={{ fontFamily: "var(--font-marker)" }} className="text-4xl md:text-5xl uppercase" data-paste="">
               Charity events
@@ -121,6 +121,9 @@ export default function CharityPage() {
               volunteer days, and one big signature event follow through the fall.
               Details land here (and on our Instagram) as soon as dates are locked.
             </p>
+            <a className="btn btn--gold mt-6" href={INSTAGRAM_URL} target="_blank" rel="noopener">
+              Follow along on Instagram
+            </a>
           </div>
 
           <div className="relative min-h-[280px] hidden sm:block" aria-hidden="true">
