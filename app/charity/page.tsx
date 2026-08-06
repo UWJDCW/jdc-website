@@ -6,7 +6,8 @@ import Polaroid from "@/components/Polaroid";
 import { HeartDoodle, SunDoodle } from "@/components/Doodles";
 import { CHARITIES } from "@/data/charities";
 import { CHARITY_PHOTOS } from "@/data/gallery";
-import { CHARITY_FORM_URL, CORPORATE_EMAIL } from "@/data/links";
+import { CAPTAIN } from "@/data/execs";
+import { DONATE_URL, CORPORATE_EMAIL } from "@/data/links";
 
 export const metadata: Metadata = {
   title: "Charity Partners — Team Winnie",
@@ -23,7 +24,7 @@ export default function CharityPage() {
       <section className="section" aria-labelledby="charity-h">
         <div className="wrap">
           <p className="eyebrow" data-paste="">
-            For our community partners
+            Support the cause
           </p>
           <h1 id="charity-h" className="torn mt-3" data-stamp="">
             Charity partners
@@ -38,18 +39,8 @@ export default function CharityPage() {
               </p>
               <p>
                 This year we’re working with <strong>six Winnipeg organizations</strong>,
-                led by our VP Charity, Vikramsinh Parmar. If your organization wants
-                student energy behind a fundraiser or a volunteer push, we’d love to
-                talk.
+                led by our VP Charity, Vikramsinh Parmar.
               </p>
-              <div className="flex flex-wrap gap-4 mt-2">
-                <a className="btn btn--gold" href={CHARITY_FORM_URL} target="_blank" rel="noopener">
-                  Partner with us
-                </a>
-                <a className="btn btn--ghost" href={`mailto:${CORPORATE_EMAIL}`}>
-                  Email the team
-                </a>
-              </div>
             </div>
             <div className="relative justify-self-center">
               <HeartDoodle className="-top-8 -left-6" data-doodle="" />
@@ -61,28 +52,59 @@ export default function CharityPage() {
         </div>
       </section>
 
-      {/* Partner wall */}
-      <section className="section !pt-0" aria-labelledby="partners">
+      {/* Partner wall + donate */}
+      <section className="section !pt-0" aria-labelledby="donate">
         <div className="wrap">
-          <h2 id="partners" className="sans-heading" data-paste="">
+          <h2 id="donate" className="sans-heading" data-paste="">
             The 26/27 partners
           </h2>
+          <p className="mt-3 max-w-[56ch]" data-paste="">
+            Want to support one of these causes directly? Pick a charity below
+            and give directly — every dollar helps.
+          </p>
           <div className="mt-6 grid gap-5 sm:grid-cols-2 md:grid-cols-3">
             {CHARITIES.map((c, i) => (
               <div
                 key={c.name}
-                className={`sticker relative grid place-items-center gap-3 min-h-[130px] text-center rot-${(["a", "b", "c"] as const)[i % 3]}`}
+                className={`sticker relative grid place-items-center gap-3 min-h-[160px] text-center rot-${(["a", "b", "c"] as const)[i % 3]}`}
                 data-sticker=""
               >
                 <span className="tape tape--top" />
-                <div className="relative w-full h-[70px]">
+                <div className="relative w-full h-[60px]">
                   <Image src={c.logo} alt={c.name} fill sizes="200px" style={{ objectFit: "contain" }} />
                 </div>
                 <span className="hand text-lg" style={{ color: "var(--purple-deep)" }}>
                   {c.name}
                 </span>
+                <a
+                  className="btn btn--gold !py-1.5 !text-[0.8rem]"
+                  href={c.donateUrl ?? DONATE_URL}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Donate
+                </a>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Partner with us (organizations) */}
+      <section className="section !pt-0" aria-labelledby="partner-with-us">
+        <div className="wrap">
+          <div className="faq-card !static max-w-[560px]" data-paste="">
+            <h2 id="partner-with-us" className="sans-heading">
+              Partner with us
+            </h2>
+            <p className="mt-2">
+              Is your organization interested in partnering with Team Winnie
+              for 26/27? Email us and we’ll connect you with our captain,{" "}
+              {CAPTAIN.names[0]}.
+            </p>
+            <a className="btn btn--gold mt-4" href={`mailto:${CORPORATE_EMAIL}`}>
+              Email the team
+            </a>
           </div>
         </div>
       </section>
@@ -99,18 +121,6 @@ export default function CharityPage() {
               volunteer days, and one big signature event follow through the fall.
               Details land here (and on our Instagram) as soon as dates are locked.
             </p>
-            <div className="mt-8 max-w-[560px]">
-              <div className="faq-card !static" data-paste="">
-                <h3 className="sans-heading">Want first dibs?</h3>
-                <p className="mt-2">
-                  Charities on our partner list get events co-planned with them, not
-                  announced to them. Sign up and our VP Charity will reach out.
-                </p>
-                <a className="btn btn--gold mt-4" href={CHARITY_FORM_URL} target="_blank" rel="noopener">
-                  Charity sign-up form
-                </a>
-              </div>
-            </div>
           </div>
 
           <div className="relative min-h-[280px] hidden sm:block" aria-hidden="true">

@@ -97,8 +97,8 @@ export const EXECS: Exec[] = [
   },
   {
     names: ["Chetan Veer Singh"],
-    role: "VP Academics, External",
-    degree: "Degree TBD", // TODO: not provided yet
+    role: "VP Academics, External and Debate",
+    degree: "BBA",
     blurb:
       "The connection to the world beyond campus. Brings in coaches, speakers, and new perspectives to help the academic teams learn from experiences beyond the classroom.",
     photos: ["/images/execs/chetan-veer-singh.jpg"],

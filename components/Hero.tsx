@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import { ButterflyDoodle, StarDoodle, HeartDoodle, SquiggleDoodle } from "@/components/Doodles";
-import { APPLY_FORM_URL, APPLICATION_DEADLINE } from "@/data/links";
+import { APPLY_FORM_URL } from "@/data/links";
 import { HERO_TEAM_PHOTO } from "@/data/gallery";
 
 gsap.registerPlugin(useGSAP);
@@ -93,11 +93,6 @@ export default function Hero() {
               Meet the team
             </a>
           </div>
-          <p className="hero-sub hand text-xl mt-4" style={{ color: "var(--purple-deep)" }}>
-            {APPLICATION_DEADLINE
-              ? `applications close ${APPLICATION_DEADLINE} — don’t sleep on it`
-              : "applications opening soon — watch our Instagram"}
-          </p>
         </div>
 
         {/* Right: the collage */}
