@@ -6,7 +6,6 @@ import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import { ButterflyDoodle, StarDoodle, HeartDoodle, SquiggleDoodle } from "@/components/Doodles";
 import { APPLY_FORM_URL } from "@/data/links";
-import { HERO_TEAM_PHOTO } from "@/data/gallery";
 import { HERO_COPY } from "@/data/hero";
 
 gsap.registerPlugin(useGSAP);
@@ -98,8 +97,8 @@ export default function Hero() {
 
           <div className="cutout cutout--wide hero-photo" data-drift="8">
             <Image
-              src={HERO_TEAM_PHOTO.src}
-              alt={HERO_TEAM_PHOTO.alt}
+              src={HERO_COPY.photo.src}
+              alt={HERO_COPY.photo.alt}
               fill
               sizes="(min-width: 768px) 46vw, 78vw"
               style={{ objectFit: "cover" }}

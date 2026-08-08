@@ -8,5 +8,3 @@ export const CHARITY_PHOTOS = Array.from({ length: 19 }, (_, i) => ({
 }));
 
 export const GALLERY_PHOTOS: { src: string; caption: string }[] = galleryData.GALLERY_PHOTOS;
-
-export const HERO_TEAM_PHOTO: { src: string; alt: string } = galleryData.HERO_TEAM_PHOTO;

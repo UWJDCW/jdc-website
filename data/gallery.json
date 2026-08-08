@@ -1,8 +1,4 @@
 {
-  "HERO_TEAM_PHOTO": {
-    "src": "/images/gallery/comp2026/hero-team.jpg",
-    "alt": "Team Winnie, the full delegation, at JDC West"
-  },
   "GALLERY_PHOTOS": [
     { "src": "/images/gallery/comp2026/gallery-01.jpg", "caption": "delegate badges, ready to go" },
     { "src": "/images/gallery/comp2026/gallery-02.jpg", "caption": "human resources, suited up" },

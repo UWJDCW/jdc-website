@@ -5,6 +5,10 @@
   "headlineMiddle": ", fundraise, and road-trip our way to",
   "headlineAccent2": "JDC West 26/27",
   "subtext": "Western Canada’s biggest business school competition, and the UWinnipeg delegation that’s going to it. Forty-six delegates, one team, three January days you’ll never forget.",
+  "photo": {
+    "src": "/images/gallery/comp2026/hero-team.jpg",
+    "alt": "Team Winnie, the full delegation, at JDC West"
+  },
   "stampText": "26/27",
   "noteLines": ["practice tuesdays,", "fundraiser fridays,", "january: everything ♥"]
 }
