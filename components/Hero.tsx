@@ -7,6 +7,7 @@ import Image from "next/image";
 import { ButterflyDoodle, StarDoodle, HeartDoodle, SquiggleDoodle } from "@/components/Doodles";
 import { APPLY_FORM_URL } from "@/data/links";
 import { HERO_TEAM_PHOTO } from "@/data/gallery";
+import { HERO_COPY } from "@/data/hero";
 
 gsap.registerPlugin(useGSAP);
 
@@ -69,7 +70,7 @@ export default function Hero() {
         {/* Left: editorial ask */}
         <div className="relative">
           <ButterflyDoodle className="hero-fly !relative mb-3" size={54} scheme="ink" />
-          <p className="hero-eyebrow eyebrow">University of Winnipeg · JDC West 26/27</p>
+          <p className="hero-eyebrow eyebrow">{HERO_COPY.eyebrow}</p>
 
           <h1 className="ed-headline mt-4">
             Join us as we{" "}
@@ -78,11 +79,7 @@ export default function Hero() {
             <span className="hero-accent hl-gold">JDC West 26/27</span>
           </h1>
 
-          <p className="hero-sub mt-5 max-w-[44ch]">
-            Western Canada’s biggest business school competition, and the UWinnipeg
-            delegation that’s going to it. Forty-six delegates, one team, three January
-            days you’ll never forget.
-          </p>
+          <p className="hero-sub mt-5 max-w-[44ch]">{HERO_COPY.subtext}</p>
 
           {/* CTA — outside the timeline, clickable at frame one */}
           <div className="mt-7 flex flex-wrap items-center gap-4">

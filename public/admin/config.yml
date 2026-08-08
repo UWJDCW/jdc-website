@@ -17,6 +17,22 @@ media_folder: "public/images"
 public_folder: "/images"
 
 collections:
+  - name: "banner"
+    label: "Announcement Banner"
+    files:
+      - file: "data/banner.json"
+        name: "banner"
+        label: "Announcement Banner"
+        description: "The bar across the very top of every page, e.g. \"Applications are open!\""
+        fields:
+          - label: "Show the banner"
+            name: "enabled"
+            widget: "boolean"
+            default: false
+          - label: "Text"
+            name: "text"
+            widget: "string"
+
   - name: "gallery"
     label: "Gallery"
     files:
@@ -163,3 +179,91 @@ collections:
                 name: "donateUrl"
                 widget: "string"
                 required: false
+
+  - name: "hero"
+    label: "Homepage Hero"
+    files:
+      - file: "data/hero.json"
+        name: "hero"
+        label: "Homepage Hero"
+        description: "The big intro block at the top of the homepage. The headline itself (with its colored accent words) isn't editable here — only the small line above it and the paragraph below it."
+        fields:
+          - label: "Eyebrow (small line above the headline)"
+            name: "eyebrow"
+            widget: "string"
+          - label: "Subtext (paragraph below the headline)"
+            name: "subtext"
+            widget: "text"
+
+  - name: "sponsors"
+    label: "Sponsors"
+    files:
+      - file: "data/sponsors.json"
+        name: "sponsors"
+        label: "Sponsor Wall"
+        description: "Logos on the /sponsors page. Empty slots automatically show a \"your logo here\" placeholder."
+        fields:
+          - label: "Sponsors"
+            name: "SPONSORS"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "string"
+              - label: "Logo"
+                name: "logo"
+                widget: "image"
+                media_folder: "/public/images/sponsor-logos"
+                public_folder: "/images/sponsor-logos"
+
+  - name: "faqs"
+    label: "FAQ"
+    files:
+      - file: "data/faqs.json"
+        name: "faqs"
+        label: "Homepage FAQ"
+        fields:
+          - label: "Questions"
+            name: "FAQS"
+            widget: "list"
+            summary: "{{q}}"
+            fields:
+              - label: "Question"
+                name: "q"
+                widget: "string"
+              - label: "Answer"
+                name: "a"
+                widget: "text"
+
+  - name: "links"
+    label: "Links & Contact"
+    files:
+      - file: "data/links.json"
+        name: "links"
+        label: "Links & Contact"
+        fields:
+          - label: "Apply form URL"
+            name: "APPLY_FORM_URL"
+            widget: "string"
+          - label: "Donate URL"
+            name: "DONATE_URL"
+            widget: "string"
+          - label: "Instagram URL"
+            name: "INSTAGRAM_URL"
+            widget: "string"
+          - label: "LinkedIn URL"
+            name: "LINKEDIN_URL"
+            widget: "string"
+          - label: "YouTube URL"
+            name: "YOUTUBE_URL"
+            widget: "string"
+          - label: "Winnie Talks URL"
+            name: "WINNIE_TALKS_URL"
+            widget: "string"
+          - label: "Chant video URL"
+            name: "CHANT_VIDEO_URL"
+            widget: "string"
+          - label: "Contact email"
+            name: "CORPORATE_EMAIL"
+            widget: "string"

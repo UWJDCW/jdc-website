@@ -4,6 +4,8 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
+import Banner from "@/components/Banner";
+import { BANNER } from "@/data/banner";
 
 const titan = Titan_One({ weight: "400", subsets: ["latin"], variable: "--font-titan", display: "swap" });
 const marker = Permanent_Marker({ weight: "400", subsets: ["latin"], variable: "--font-marker", display: "swap" });
@@ -19,11 +21,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${titan.variable} ${marker.variable} ${caveat.variable} ${poppins.variable}`}>
-      <body className="tx-paper">
+      <body className={`tx-paper${BANNER.enabled ? " has-banner" : ""}`}>
         <a className="skip-link" href="#main">
           Skip to content
         </a>
         <SmoothScroll />
+        <Banner />
         <Nav />
         <main id="main">{children}</main>
         <Footer />

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Fx from "@/components/Fx";
 import Starburst from "@/components/Starburst";
 import { StarDoodle, SquiggleDoodle } from "@/components/Doodles";
 import { CORPORATE_EMAIL } from "@/data/links";
+import { SPONSORS } from "@/data/sponsors";
 
 export const metadata: Metadata = {
   title: "Sponsors — Team Winnie",
@@ -44,10 +46,22 @@ export default function SponsorsPage() {
             The 26/27 sponsor wall
           </h2>
           <div className="mt-6 grid gap-5 grid-cols-2 md:grid-cols-4">
-            {Array.from({ length: 8 }).map((_, i) => (
+            {SPONSORS.map((s, i) => (
               <div
-                key={i}
-                className={`sticker relative grid place-items-center min-h-[110px] rot-${(["a", "b", "c"] as const)[i % 3]}`}
+                key={s.name}
+                className={`sticker relative grid place-items-center min-h-[110px] p-4 rot-${(["a", "b", "c"] as const)[i % 3]}`}
+                data-sticker=""
+              >
+                <span className="tape tape--top" />
+                <div className="relative w-full h-[60px]">
+                  <Image src={s.logo} alt={s.name} fill sizes="200px" style={{ objectFit: "contain" }} />
+                </div>
+              </div>
+            ))}
+            {Array.from({ length: Math.max(0, 8 - SPONSORS.length) }).map((_, i) => (
+              <div
+                key={`placeholder-${i}`}
+                className={`sticker relative grid place-items-center min-h-[110px] rot-${(["a", "b", "c"] as const)[(SPONSORS.length + i) % 3]}`}
                 data-sticker=""
               >
                 <span className="tape tape--top" />

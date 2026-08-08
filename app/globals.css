@@ -428,6 +428,53 @@ body {
   box-shadow: 0 -8px 24px rgba(25, 25, 25, 0.25);
 }
 
+/* ---------- Announcement bar (optional, toggled at /admin) ---------- */
+
+:root {
+  --banner-h: 44px;
+}
+
+.announce-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 110;
+  height: var(--banner-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--yellow);
+  border-bottom: 3px solid var(--ink);
+  padding-inline: 1rem;
+  text-align: center;
+}
+.announce-bar p {
+  font-size: 1.05rem;
+  color: var(--ink);
+  font-weight: 700;
+  line-height: 1.1;
+}
+.announce-heart {
+  flex: none;
+}
+@media (max-width: 640px) {
+  .announce-bar p {
+    font-size: 0.85rem;
+  }
+  .announce-heart {
+    display: none;
+  }
+}
+
+body.has-banner .nav-wrap {
+  top: calc(0.9rem + var(--banner-h));
+}
+body.has-banner main {
+  padding-top: calc(92px + var(--banner-h));
+}
+
 /* ---------- Nav (floating sticker capsule) ---------- */
 
 main {
