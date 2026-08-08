@@ -6,9 +6,7 @@ backend:
   name: github
   repo: samvelsiby/jdc-website
   branch: main
-  # TODO: set this to the site's real production URL (e.g. https://teamwinnie.ca)
-  # once it's live — see README for why.
-  base_url: https://REPLACE-WITH-PRODUCTION-DOMAIN
+  base_url: https://jdc-website-sigma.vercel.app
   auth_endpoint: api/auth
 
 # Edits commit straight to `main` and go live on the next deploy. Switch to
