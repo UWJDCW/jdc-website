@@ -4,6 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Team Winnie — Content Admin</title>
+    <!-- Pins relative URL resolution to /admin/ regardless of whether the
+         browser is at /admin or /admin/ — without this, Decap CMS's
+         relative fetch for config.yml resolves against the site root
+         instead of /admin/ when there's no trailing slash. -->
+    <base href="/admin/" />
     <link href="/admin/config.yml" rel="cms-config-url" />
   </head>
   <body>
