@@ -14,18 +14,6 @@
   "EXECS": [
     {
       "names": [
-        "SamvelSiby"
-      ],
-      "role": "Godparent",
-      "roleNote": "our returning-alumni mentor",
-      "degree": "BBA Accounting",
-      "blurb": "The team's built-in wisdom, guidance, and support system. A trusted mentor who helps the exec team navigate the highs, lows, and occasional chaos of JDC West.",
-      "photos": [
-        "/images/execs/joshua-adeleke.jpg"
-      ]
-    },
-    {
-      "names": [
         "Shreya Sharma"
       ],
       "role": "VP Internal",
@@ -133,6 +121,16 @@
       "photos": [
         "/images/execs/harleen-deol.jpg"
       ]
+    },
+    {
+      "featured": false,
+      "names": [
+        "SAmvesiby"
+      ],
+      "role": "ibiejb",
+      "roleNote": "fdfijdi",
+      "degree": "jonvosd",
+      "blurb": "ijfodwjn"
     }
   ]
 }
