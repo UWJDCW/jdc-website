@@ -73,10 +73,10 @@ export default function Hero() {
           <p className="hero-eyebrow eyebrow">{HERO_COPY.eyebrow}</p>
 
           <h1 className="ed-headline mt-4">
-            Join us as we{" "}
-            <span className="hero-accent marker-accent">compete</span>, fundraise, and
-            road-trip our way to{" "}
-            <span className="hero-accent hl-gold">JDC West 26/27</span>
+            {HERO_COPY.headlineBefore}{" "}
+            <span className="hero-accent marker-accent">{HERO_COPY.headlineAccent1}</span>
+            {HERO_COPY.headlineMiddle}{" "}
+            <span className="hero-accent hl-gold">{HERO_COPY.headlineAccent2}</span>
           </h1>
 
           <p className="hero-sub mt-5 max-w-[44ch]">{HERO_COPY.subtext}</p>
@@ -108,15 +108,16 @@ export default function Hero() {
           </div>
 
           <div className="note-card hero-note left-0 bottom-2" data-drift="24">
-            practice tuesdays,
-            <br />
-            fundraiser fridays,
-            <br />
-            january: everything ♥
+            {HERO_COPY.noteLines.map((line, i) => (
+              <span key={i}>
+                {line}
+                {i < HERO_COPY.noteLines.length - 1 && <br />}
+              </span>
+            ))}
           </div>
 
           <div className="stamp hero-stamp right-2 top-4" data-drift="30">
-            <div className="stamp-inner">26/27</div>
+            <div className="stamp-inner">{HERO_COPY.stampText}</div>
           </div>
 
           <StarDoodle className="hero-doodle top-[6%] left-[10%]" size={44} data-drift="36" />

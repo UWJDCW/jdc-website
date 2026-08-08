@@ -6,7 +6,6 @@ import Polaroid from "@/components/Polaroid";
 import { HeartDoodle, SunDoodle } from "@/components/Doodles";
 import { CHARITIES } from "@/data/charities";
 import { CHARITY_PHOTOS } from "@/data/gallery";
-import { CAPTAIN } from "@/data/execs";
 import { DONATE_URL, CORPORATE_EMAIL, INSTAGRAM_URL } from "@/data/links";
 
 export const metadata: Metadata = {
@@ -99,8 +98,7 @@ export default function CharityPage() {
             </h2>
             <p className="mt-2">
               Is your organization interested in partnering with Team Winnie
-              for 26/27? Email us and we’ll connect you with our captain,{" "}
-              {CAPTAIN.names[0]}.
+              for 26/27? Email us and we’ll connect you with our captain.
             </p>
             <a className="btn btn--gold mt-4" href={`mailto:${CORPORATE_EMAIL}`}>
               Email the team

@@ -10,7 +10,8 @@ import ScatteredGallery from "@/components/ScatteredGallery";
 import { SunDoodle, HeartDoodle, StarDoodle, SmileyDoodle, ArrowDoodle, CurlyArrowDoodle } from "@/components/Doodles";
 import { CATEGORIES } from "@/data/categories";
 import { CHARITIES } from "@/data/charities";
-import { CAPTAIN } from "@/data/execs";
+import { CAPTAIN, initials } from "@/data/execs";
+import { ABOUT } from "@/data/about";
 import {
   APPLY_FORM_URL,
   CORPORATE_EMAIL,
@@ -41,28 +42,15 @@ export default function Home() {
             <StarDoodle className="top-[42%] right-[4%] hidden md:block" size={44} data-doodle="" />
             <HeartDoodle className="bottom-2 right-[20%] hidden md:block" size={38} data-doodle="" />
             <div className="grid gap-4 max-w-[58ch]">
-              <p>
-                Team Winnie is the University of Winnipeg’s delegation to JDC West — a
-                team of students who spend a semester training together, fundraising
-                together, and then spend one January weekend competing against business
-                schools from across Western Canada.
-              </p>
-              <p>
-                People don’t join for the resume line (though it doesn’t hurt). They
-                join for the people: the practices, the road trip, the inside jokes
-                that only make sense by February.
-              </p>
+              <p>{ABOUT.paragraph1}</p>
+              <p>{ABOUT.paragraph2}</p>
               <div className="relative">
                 <SmileyDoodle className="!relative" size={60} data-doodle="" />
               </div>
             </div>
 
             <div className="grid grid-cols-3 gap-4 content-start">
-              {[
-                { n: 46, label: "delegates" },
-                { n: 3, label: "days" },
-                { n: 1, label: "team" },
-              ].map((s) => (
+              {ABOUT.stats.map((s) => (
                 <div key={s.label} className="sticker text-center !px-2" data-sticker="">
                   <p className="display-name display-section">
                     <span data-count={s.n}>0</span>
@@ -129,8 +117,8 @@ export default function Home() {
                 <p className="eyebrow">The people</p>
                 <h3 className="sans-heading !text-[1.35rem]">Meet the execs</h3>
                 <p className="text-sm">
-                  Twelve students building the delegation — captained by
-                  Thiksha, fuelled by group-chat chaos.
+                  Twelve students building the delegation — led by our
+                  captain, fuelled by group-chat chaos.
                 </p>
                 <Link className="btn btn--ghost !py-2 !text-[0.8rem] mt-auto" href="/execs">
                   Say hi
@@ -266,16 +254,16 @@ export default function Home() {
       <section className="section" aria-labelledby="cap">
         <div className="wrap grid gap-10 md:grid-cols-[auto_1fr] items-center">
           <Polaroid
-            caption="Thiksha, Captain"
+            caption={`${CAPTAIN.names[0]}, Captain`}
             rotate="b"
             tape="corners"
             variant="sunset"
             className="w-[260px]"
             src={CAPTAIN.photos?.[0]}
-            alt="Thiksha Sathish Kumar"
+            alt={CAPTAIN.names[0]}
             data-polaroid=""
           >
-            <span className="polaroid-initials">TS</span>
+            <span className="polaroid-initials">{initials(CAPTAIN.names[0])}</span>
           </Polaroid>
           <div className="relative">
             <ArrowDoodle className="-top-8 left-4 -scale-x-100" data-doodle="" />

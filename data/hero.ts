@@ -1,6 +1,16 @@
-// Hero eyebrow + subtext, editable at /admin — see data/hero.json. The
-// headline itself stays in components/Hero.tsx: it has inline styled accent
-// spans ("compete", "JDC West 26/27") that a plain text field would flatten.
+// Hero copy, editable at /admin — see data/hero.json. The headline is split
+// into pieces (headlineBefore/Accent1/Middle/Accent2) so the two colored
+// accent words stay styled — components/Hero.tsx wraps them in spans, only
+// the words themselves come from here.
 import heroData from "./hero.json";
 
-export const HERO_COPY: { eyebrow: string; subtext: string } = heroData;
+export const HERO_COPY: {
+  eyebrow: string;
+  headlineBefore: string;
+  headlineAccent1: string;
+  headlineMiddle: string;
+  headlineAccent2: string;
+  subtext: string;
+  stampText: string;
+  noteLines: string[];
+} = heroData;
