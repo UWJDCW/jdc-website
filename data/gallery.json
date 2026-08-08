@@ -1,0 +1,28 @@
+{
+  "HERO_TEAM_PHOTO": {
+    "src": "/images/gallery/comp2026/hero-team.jpg",
+    "alt": "Team Winnie, the full delegation, at JDC West"
+  },
+  "GALLERY_PHOTOS": [
+    { "src": "/images/gallery/comp2026/gallery-01.jpg", "caption": "delegate badges, ready to go" },
+    { "src": "/images/gallery/comp2026/gallery-02.jpg", "caption": "human resources, suited up" },
+    { "src": "/images/gallery/comp2026/gallery-03.jpg", "caption": "entrepreneurship squad" },
+    { "src": "/images/gallery/comp2026/gallery-04.jpg", "caption": "not-for-profit, ready to present" },
+    { "src": "/images/gallery/comp2026/gallery-05.jpg", "caption": "international business trio" },
+    { "src": "/images/gallery/comp2026/gallery-06.jpg", "caption": "athletics, gym floor energy" },
+    { "src": "/images/gallery/comp2026/gallery-07.jpg", "caption": "banquet night, all in" },
+    { "src": "/images/gallery/comp2026/gallery-08.jpg", "caption": "practice day, ball in hand" },
+    { "src": "/images/gallery/comp2026/gallery-09.jpg", "caption": "case prep, mid-laugh" },
+    { "src": "/images/gallery/comp2026/gallery-10.jpg", "caption": "team hangout, holiday edition" },
+    { "src": "/images/gallery/comp2026/gallery-11.jpg", "caption": "the road trip to JDC West" },
+    { "src": "/images/gallery/comp2026/gallery-12.jpg", "caption": "another win in the books" },
+    { "src": "/images/gallery/comp2026/gallery-13.jpg", "caption": "business technology, banner-ready" },
+    { "src": "/images/gallery/comp2026/gallery-14.jpg", "caption": "marketing, making it look easy" },
+    { "src": "/images/gallery/comp2026/gallery-15.jpg", "caption": "business strategy trio" },
+    { "src": "/images/gallery/comp2026/gallery-16.jpg", "caption": "food court between rounds" },
+    { "src": "/images/gallery/comp2026/gallery-17.jpg", "caption": "hallway antics, still in character" },
+    { "src": "/images/gallery/comp2026/gallery-18.jpg", "caption": "executive of the year" },
+    { "src": "/images/gallery/comp2026/gallery-19.jpg", "caption": "the after-party pose" },
+    { "src": "/images/gallery/comp2026/gallery-20.jpg", "caption": "banquet night, dressed up" }
+  ]
+}

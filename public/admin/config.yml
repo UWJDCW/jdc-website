@@ -1,0 +1,167 @@
+# Decap CMS config — see README's "Editing content" section for what this
+# is and how sign-in works. This file is the ONLY place that defines what
+# shows up in the /admin editor; add a new field here and it appears there.
+
+backend:
+  name: github
+  repo: samvelsiby/jdc-website
+  branch: main
+  # TODO: set this to the site's real production URL (e.g. https://teamwinnie.ca)
+  # once it's live — see README for why.
+  base_url: https://REPLACE-WITH-PRODUCTION-DOMAIN
+  auth_endpoint: api/auth
+
+# Edits commit straight to `main` and go live on the next deploy. Switch to
+# "editorial_workflow" here if you'd rather review drafts before they publish.
+publish_mode: simple
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - file: "data/gallery.json"
+        name: "gallery"
+        label: "Homepage Gallery"
+        fields:
+          - label: "Hero team photo"
+            name: "HERO_TEAM_PHOTO"
+            widget: "object"
+            fields:
+              - label: "Photo"
+                name: "src"
+                widget: "image"
+                media_folder: "/public/images/gallery/comp2026"
+                public_folder: "/images/gallery/comp2026"
+              - label: "Alt text"
+                name: "alt"
+                widget: "string"
+          - label: "26/27 gallery photos"
+            name: "GALLERY_PHOTOS"
+            widget: "list"
+            summary: "{{caption}}"
+            fields:
+              - label: "Photo"
+                name: "src"
+                widget: "image"
+                media_folder: "/public/images/gallery/comp2026"
+                public_folder: "/images/gallery/comp2026"
+              - label: "Caption"
+                name: "caption"
+                widget: "string"
+
+  - name: "execs"
+    label: "Exec Team"
+    files:
+      - file: "data/execs.json"
+        name: "execs"
+        label: "Exec Team"
+        fields:
+          - label: "Captain"
+            name: "CAPTAIN"
+            widget: "object"
+            fields:
+              - label: "Name(s)"
+                name: "names"
+                widget: "list"
+                hint: "Usually one name. Co-VP roles that share a card get two."
+              - label: "Role"
+                name: "role"
+                widget: "string"
+              - label: "Role note"
+                name: "roleNote"
+                widget: "string"
+                required: false
+                hint: "Gloss for a title an outside visitor wouldn't recognize"
+              - label: "Degree"
+                name: "degree"
+                widget: "string"
+              - label: "Blurb"
+                name: "blurb"
+                widget: "text"
+              - label: "Featured"
+                name: "featured"
+                widget: "boolean"
+                required: false
+                default: false
+              - label: "Photos"
+                name: "photos"
+                widget: "list"
+                required: false
+                hint: "One photo per name above, same order. Leave empty to fall back to initials."
+                field:
+                  label: "Photo"
+                  name: "photo"
+                  widget: "image"
+                  media_folder: "/public/images/execs"
+                  public_folder: "/images/execs"
+          - label: "Execs"
+            name: "EXECS"
+            widget: "list"
+            summary: "{{fields.role}} — {{fields.names}}"
+            fields:
+              - label: "Name(s)"
+                name: "names"
+                widget: "list"
+                hint: "Usually one name. Co-VP roles that share a card get two."
+              - label: "Role"
+                name: "role"
+                widget: "string"
+              - label: "Role note"
+                name: "roleNote"
+                widget: "string"
+                required: false
+                hint: "Gloss for a title an outside visitor wouldn't recognize"
+              - label: "Degree"
+                name: "degree"
+                widget: "string"
+              - label: "Blurb"
+                name: "blurb"
+                widget: "text"
+              - label: "Featured"
+                name: "featured"
+                widget: "boolean"
+                required: false
+                default: false
+              - label: "Photos"
+                name: "photos"
+                widget: "list"
+                required: false
+                hint: "One photo per name above, same order. Leave empty to fall back to initials."
+                field:
+                  label: "Photo"
+                  name: "photo"
+                  widget: "image"
+                  media_folder: "/public/images/execs"
+                  public_folder: "/images/execs"
+
+  - name: "charities"
+    label: "Charities"
+    files:
+      - file: "data/charities.json"
+        name: "charities"
+        label: "Charity Partners"
+        fields:
+          - label: "Charities"
+            name: "CHARITIES"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "string"
+              - label: "Announced"
+                name: "announced"
+                widget: "boolean"
+                default: true
+              - label: "Logo"
+                name: "logo"
+                widget: "image"
+                media_folder: "/public/images/charity-logos"
+                public_folder: "/images/charity-logos"
+              - label: "Donate URL"
+                name: "donateUrl"
+                widget: "string"
+                required: false

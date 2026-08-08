@@ -64,11 +64,32 @@ Infrastructure is on a **shared org account** that passes between execs — doma
 
 ## Content Model
 
-All roster, bio, and partner content is **hardcoded as data files in the repo**. There is no CMS. Content changes roughly once a year at exec turnover, and a developer makes the edit.
+Roster, bio, gallery, and charity-partner content lives as JSON in `data/*.json` (`gallery.json`, `execs.json`, `charities.json`). The matching `data/*.ts` files just import that JSON and re-export it with types — components import from the `.ts` files exactly as before, so nothing about the app code changed.
 
-This is a deliberate trade: it costs an exec a pull request instead of a login, but it means no CMS account to inherit, pay for, or lose access to between exec generations. It also assumes the next exec team has *someone* who can run a build — if that stops being true, this decision is the first one to revisit.
+The JSON is editable two ways:
 
-Every form is an **external Google Form** — delegate applications and the charity sign-up both link out. The site has no backend and no form handling of its own.
+1. **Directly in the repo**, like any file — still fine for a developer doing a bigger change.
+2. **Through `/admin`** — a [Decap CMS](https://decapcms.org/) editor that lets a non-technical exec update gallery photos, exec bios/degrees/photos, and charity logos through a form, with uploads landing in the right `public/images/` folder. Saving there commits straight to `main` and it's live on the next deploy.
+
+See **"Editing content"** below for how sign-in works and what a future maintainer needs to set up once.
+
+Every form is still an **external Google Form** — delegate applications and the charity sign-up both link out. The site has no backend or form handling of its own beyond the CMS login.
+
+## Editing content
+
+`/admin` is the editor UI. What shows up there is defined entirely by [`public/admin/config.yml`](public/admin/config.yml) — add a field there and it appears in the form; nothing else needs to change.
+
+Sign-in uses your own GitHub account (whoever has push access to this repo can log in) rather than a third-party CMS account, so there's nothing to pay for or lose access to at exec turnover — just make sure the next exec's GitHub account is a collaborator on the repo.
+
+**One-time setup for whoever is deploying this** (already done for the current production deploy — only needed again if the domain changes or a fresh deploy needs its own login):
+
+1. Create a GitHub OAuth App: GitHub → Settings → Developer settings → OAuth Apps → New OAuth App.
+   - Homepage URL: the site's production URL (e.g. `https://teamwinnie.ca`)
+   - Authorization callback URL: `https://<that domain>/api/callback`
+2. Copy the generated **Client ID** and **Client secret** into the Vercel project's environment variables as `OAUTH_GITHUB_CLIENT_ID` and `OAUTH_GITHUB_CLIENT_SECRET`, then redeploy.
+3. Update `base_url` in `public/admin/config.yml` to that same production domain.
+
+After that, anyone with repo access can go to `/admin`, click "Login with GitHub," and edit.
 
 ## Images
 
