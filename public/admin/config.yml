@@ -6,7 +6,7 @@ backend:
   name: github
   repo: samvelsiby/jdc-website
   branch: main
-  base_url: https://jdc-website-sigma.vercel.app
+  base_url: https://uwjdcwest.vercel.app
   auth_endpoint: api/auth
 
 # Edits commit straight to `main` and go live on the next deploy. Switch to
