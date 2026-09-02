@@ -4,7 +4,7 @@
 
 backend:
   name: github
-  repo: samvelsiby/jdc-website
+  repo: UWJDCW/jdc-website
   branch: main
   base_url: https://uwjdcwest.vercel.app
   auth_endpoint: api/auth
