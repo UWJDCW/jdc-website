@@ -1,10 +1,10 @@
 {
   "CHARITIES": [
-    { "name": "Agape Table", "announced": true, "logo": "/images/charity-logos/agape-table.png" },
-    { "name": "Darcy's ARC", "announced": true, "logo": "/images/charity-logos/darcys-arc.png" },
-    { "name": "The Salvation Army", "announced": true, "logo": "/images/charity-logos/salvation-army.png" },
-    { "name": "Children's Hospital Foundation", "announced": true, "logo": "/images/charity-logos/childrens-hospital-foundation.png" },
-    { "name": "Maddox Warriors", "announced": true, "logo": "/images/charity-logos/maddox-warriors.png" },
+    { "name": "Agape Table", "announced": true, "logo": "/images/charity-logos/agape-table.png", "donateUrl": "https://wl.donorperfect.net/weblink/weblink.aspx?name=E920352QE&id=2" },
+    { "name": "Darcy's ARC", "announced": true, "logo": "/images/charity-logos/darcys-arc.png", "donateUrl": "https://darcysarc.ca/" },
+    { "name": "The Salvation Army", "announced": true, "logo": "/images/charity-logos/salvation-army.png", "donateUrl": "https://donate.salvationarmy.ca/page/62388/donate/1" },
+    { "name": "Children's Hospital Foundation", "announced": true, "logo": "/images/charity-logos/childrens-hospital-foundation.png", "donateUrl": "http://chfm.convio.net/goto/uwjdcwest" },
+    { "name": "Maddox Warriors", "announced": true, "logo": "/images/charity-logos/maddox-warriors.png", "donateUrl": "https://madoxswarriors.com/product/donate-to-madoxs-warriors/" },
     { "name": "Winnipeg Goldeyes", "announced": true, "logo": "/images/charity-logos/winnipeg-goldeyes.png" }
   ]
 }
