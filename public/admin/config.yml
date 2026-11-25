@@ -154,6 +154,15 @@ collections:
         name: "charities"
         label: "Charity Partners"
         fields:
+          - label: "Donation reference"
+            name: "DONATE_REFERENCE"
+            widget: "string"
+            hint: "What donors type in the comments / message box so the charity knows the gift came through JDC West. Shown with a Copy button in every donate pop-up."
+          - label: "Notes for every charity"
+            name: "DONATE_GENERAL"
+            widget: "list"
+            hint: "Shown in every donate pop-up that has a link, after that charity's own notes."
+            field: { label: "Note", name: "note", widget: "text" }
           - label: "Charities"
             name: "CHARITIES"
             widget: "list"
@@ -175,6 +184,22 @@ collections:
                 name: "donateUrl"
                 widget: "string"
                 required: false
+                hint: "Leave empty and the pop-up tells donors to email the team instead."
+              - label: "Donation notes"
+                name: "instructions"
+                widget: "list"
+                required: false
+                hint: "Steps donors must read in the pop-up before the donate link unlocks."
+                field: { label: "Note", name: "note", widget: "text" }
+              - label: "Second link URL"
+                name: "altUrl"
+                widget: "string"
+                required: false
+              - label: "Second link label"
+                name: "altLabel"
+                widget: "string"
+                required: false
+                hint: "e.g. \"Donate in person instead\""
 
   - name: "hero"
     label: "Homepage Hero"
@@ -303,9 +328,6 @@ collections:
         fields:
           - label: "Apply form URL"
             name: "APPLY_FORM_URL"
-            widget: "string"
-          - label: "Donate URL"
-            name: "DONATE_URL"
             widget: "string"
           - label: "Instagram URL"
             name: "INSTAGRAM_URL"

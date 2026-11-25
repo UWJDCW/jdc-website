@@ -1,10 +1,65 @@
 {
+  "DONATE_REFERENCE": "UWINNIPEG JDC WEST",
+  "DONATE_GENERAL": [
+    "Donations of $20 or more get a tax receipt, sent to the email address you give."
+  ],
   "CHARITIES": [
-    { "name": "Agape Table", "announced": true, "logo": "/images/charity-logos/agape-table.png", "donateUrl": "https://wl.donorperfect.net/weblink/weblink.aspx?name=E920352QE&id=2" },
-    { "name": "Darcy's ARC", "announced": true, "logo": "/images/charity-logos/darcys-arc.png", "donateUrl": "https://darcysarc.ca/" },
-    { "name": "The Salvation Army", "announced": true, "logo": "/images/charity-logos/salvation-army.png", "donateUrl": "https://donate.salvationarmy.ca/page/62388/donate/1" },
-    { "name": "Children's Hospital Foundation", "announced": true, "logo": "/images/charity-logos/childrens-hospital-foundation.png", "donateUrl": "http://chfm.convio.net/goto/uwjdcwest" },
-    { "name": "Maddox Warriors", "announced": true, "logo": "/images/charity-logos/maddox-warriors.png", "donateUrl": "https://madoxswarriors.com/product/donate-to-madoxs-warriors/" },
-    { "name": "Winnipeg Goldeyes", "announced": true, "logo": "/images/charity-logos/winnipeg-goldeyes.png" }
+    {
+      "name": "Agape Table",
+      "announced": true,
+      "logo": "/images/charity-logos/agape-table.png",
+      "donateUrl": "https://wl.donorperfect.net/weblink/weblink.aspx?name=E920352QE&id=2",
+      "instructions": [
+        "Prefer e-transfer? Send it to treasurer@agapetable.ca.",
+        "In the e-transfer message, include your full name and your email or mailing address. Without it, Agape Table can't send your tax receipt."
+      ]
+    },
+    {
+      "name": "Darcy's ARC",
+      "announced": true,
+      "logo": "/images/charity-logos/darcys-arc.png",
+      "donateUrl": "https://darcysarc.ca/",
+      "instructions": [
+        "Your donation goes straight through Darcy's ARC's website.",
+        "Write UWINNIPEG JDC WEST in the comments or order notes (Additional Information on the donation tab). It's the only way they'll know your gift came through JDC West."
+      ]
+    },
+    {
+      "name": "The Salvation Army",
+      "announced": true,
+      "logo": "/images/charity-logos/salvation-army.png",
+      "donateUrl": "https://donate.salvationarmy.ca/page/62388/donate/1",
+      "instructions": [
+        "In Donor Information, tick the box: \"This donation is from an organization. The charitable tax receipt will be issued to the organization.\"",
+        "Enter UWINNIPEG JDC WEST as the organization name."
+      ],
+      "altUrl": "https://cohwinnipeg.ca/how-you-can-help/donate",
+      "altLabel": "Donate in person instead"
+    },
+    {
+      "name": "Children's Hospital Foundation",
+      "announced": true,
+      "logo": "/images/charity-logos/childrens-hospital-foundation.png",
+      "donateUrl": "http://chfm.convio.net/goto/uwjdcwest",
+      "instructions": [
+        "Your tax receipt isn't instant. It's emailed or mailed to the address you enter on the donation page within a week or two.",
+        "Gifts of $20 or more are always receipted. Under $20? Receipts are available on request."
+      ]
+    },
+    {
+      "name": "Maddox Warriors",
+      "announced": true,
+      "logo": "/images/charity-logos/maddox-warriors.png",
+      "donateUrl": "https://madoxswarriors.com/product/donate-to-madoxs-warriors/",
+      "instructions": [
+        "Your donation goes straight through Madox's Warriors' website.",
+        "Write UWINNIPEG JDC WEST in the order notes (Additional Information on the donation page). It's the only way they'll know your gift came through JDC West."
+      ]
+    },
+    {
+      "name": "Winnipeg Goldeyes",
+      "announced": true,
+      "logo": "/images/charity-logos/winnipeg-goldeyes.png"
+    }
   ]
 }

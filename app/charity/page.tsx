@@ -4,9 +4,10 @@ import Fx from "@/components/Fx";
 import Starburst from "@/components/Starburst";
 import Polaroid from "@/components/Polaroid";
 import { HeartDoodle, SunDoodle } from "@/components/Doodles";
-import { CHARITIES } from "@/data/charities";
+import DonateButton from "@/components/DonateButton";
+import { CHARITIES, DONATE_GENERAL, DONATE_REFERENCE } from "@/data/charities";
 import { CHARITY_PHOTOS } from "@/data/gallery";
-import { DONATE_URL, CORPORATE_EMAIL, INSTAGRAM_URL } from "@/data/links";
+import { CORPORATE_EMAIL, INSTAGRAM_URL } from "@/data/links";
 
 export const metadata: Metadata = {
   title: "Charity Partners — Team Winnie",
@@ -75,14 +76,12 @@ export default function CharityPage() {
                 <span className="hand text-lg" style={{ color: "var(--purple-deep)" }}>
                   {c.name}
                 </span>
-                <a
-                  className="btn btn--gold !py-1.5 !text-[0.8rem]"
-                  href={c.donateUrl ?? DONATE_URL}
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Donate
-                </a>
+                <DonateButton
+                  charity={c}
+                  reference={DONATE_REFERENCE}
+                  general={DONATE_GENERAL}
+                  email={CORPORATE_EMAIL}
+                />
               </div>
             ))}
           </div>
